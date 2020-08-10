@@ -1,9 +1,17 @@
-import React from 'react';
-import './ProjectCard.css';
-import Tilt from 'react-tilt';
+import React from "react";
+import "./ProjectCard.css";
+import Tilt from "react-tilt";
+import { projectType } from "../../interfaces/Project";
 // import DevIcons from '../DevIcons/DevIcons';
 
-function ProjectCard({ title, content, link, image, direction, stack }) {
+function ProjectCard({
+  title,
+  content,
+  link,
+  image,
+  direction,
+  stack,
+}: projectType) {
   return (
     <div className='main' style={{ flexDirection: direction }}>
       <div className='description'>

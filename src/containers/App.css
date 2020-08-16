@@ -7,6 +7,7 @@
   z-index: -1;
 }
 
-.devicon {
-  font-size: 5em;
+.devicon-large {
+  height: 60px;
+  margin: 15px;
 }

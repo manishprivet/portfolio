@@ -6,6 +6,7 @@ import tsParticlesConfig from "../data/tsParticles.json";
 import ContactMe from "../components/ContactMe/ContactMe";
 import Particles, { IParticlesParams } from "react-tsparticles";
 import ContactForm from "../components/Form/ContactForm";
+import Technologies from "../components/Technologies/Technologies";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         options={tsParticlesConfig as IParticlesParams}
       />
       <Profile />
+      <Technologies />
       <Projects />
       <ContactForm />
       <ContactMe />

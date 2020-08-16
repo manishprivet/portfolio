@@ -35,9 +35,15 @@ import { ReactComponent as WireGuardIcon } from "../../Stack/wireguard.svg";
 import { ReactComponent as DynamoDBIcon } from "../../Stack/aws-dynamodb.svg";
 import { stackTypes } from "../../interfaces/Project";
 
-export default ({ stacks }: { stacks: Array<stackTypes> }) => {
+export default ({
+  stacks,
+  className,
+}: {
+  stacks: Array<stackTypes>;
+  className: string;
+}) => {
   const rest = {
-    className: "devicon",
+    className,
   };
   const iconList: Record<stackTypes, any> = {
     Go: <GoIcon fill='#00ADD8' {...rest} />,
@@ -58,7 +64,7 @@ export default ({ stacks }: { stacks: Array<stackTypes> }) => {
     Babel: <BabelIcon fill='#F9DC3E' {...rest} />,
     DigitalOcean: <DigitalOceanIcon fill='#0080FF' {...rest} />,
     Git: <GitIcon fill='#F05032' {...rest} />,
-    Github: <GitHubIcon fill='#181717' {...rest} />,
+    Github: <GitHubIcon fill='#fefefe' {...rest} />,
     GithubActions: <GithubActionsIcon fill='#2088FF' {...rest} />,
     Gitlab: <GitlabIcon fill='#FCA121' {...rest} />,
     Gnome: <GnomeIcon fill='#4A86CF' {...rest} />,
@@ -68,7 +74,7 @@ export default ({ stacks }: { stacks: Array<stackTypes> }) => {
     NextJS: <NextJSIcon fill='#fff' {...rest} />,
     PostgreSQL: <PostgreSQLIcon fill='#336791' {...rest} />,
     Redux: <ReduxIcon fill='#764ABC' {...rest} />,
-    Rust: <RustIcon fill='#000000' {...rest} />,
+    Rust: <RustIcon fill='#fefefe' {...rest} />,
     Sentry: <SentryIcon fill='#FB4226' {...rest} />,
     TypeScript: <TypeScriptIcon fill='#007ACC' {...rest} />,
     Ubuntu: <UbuntuIcon fill='#E95420' {...rest} />,

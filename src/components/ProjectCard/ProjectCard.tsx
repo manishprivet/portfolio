@@ -18,7 +18,7 @@ function ProjectCard({
         <div className='cardText'>
           <h1>{title}</h1>
           <h3>{content}</h3>
-          <DevIcons stacks={stack} />
+          <DevIcons className='devicon' stacks={stack} />
           <br />
           <a href={link} target='_blank' rel='noopener noreferrer'>
             <button>See Live</button>

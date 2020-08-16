@@ -14,15 +14,7 @@ function Projects() {
         if (dir_counter % 2 === 0) direction = "row-reverse";
         else direction = "row";
         return (
-          <ProjectCard
-            title={project.title}
-            content={project.content}
-            link={project.link}
-            image={project.image}
-            direction={direction}
-            key={dir_counter}
-            stack={project.stack}
-          />
+          <ProjectCard {...project} direction={direction} key={dir_counter} />
         );
       })}
     </div>

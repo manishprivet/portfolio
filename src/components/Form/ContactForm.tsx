@@ -46,6 +46,7 @@ const ContactForm = () => {
 
   return (
     <>
+      <h1 style={{ textAlign: "center" }}>Have any queries?</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type='text'

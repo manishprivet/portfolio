@@ -1,10 +1,17 @@
-import { Interface } from "readline";
+
 
 export interface projectType {
   title: string;
   content: string;
   link: string;
   image: string;
-  stack: Array<string>;
-  direction?: "row" | "row-reverse";
+  stack: Array<stackTypes>;
+  direction?: 'row'|'row-reverse';
 }
+
+export type stackTypes =
+    'Go'|'JavaScript'|'Python'|'CSS'|'HTML'|'React'|'NodeJS'|'Docker'|'Mongo'|
+    'Webpack'|'Saas'|'Heroku'|'AWS'|'Babel'|'DigitalOcean'|'Git'|'Github'|
+    'Gitlab'|'Gnome'|'GCP'|'Linux'|'Mocha'|'NextJS'|'PostgreSQL'|'Python'|
+    'Redux'|'Rust'|'Sentry'|'TypeScript'|'Ubuntu'|'Vercel'|'WebAssembly'|
+    'WebPack'|'WireGuard'|'GithubActions'|'DynamoDB'

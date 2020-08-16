@@ -2,7 +2,7 @@ import React from "react";
 import "./ProjectCard.css";
 import Tilt from "react-tilt";
 import { projectType } from "../../interfaces/Project";
-// import DevIcons from '../DevIcons/DevIcons';
+import DevIcons from "../DevIcons/DevIcons";
 
 function ProjectCard({
   title,
@@ -18,7 +18,8 @@ function ProjectCard({
         <div className='cardText'>
           <h1>{title}</h1>
           <h3>{content}</h3>
-          {/* {stack.map((icon) => <DevIcons icon={icon} />)} */}
+          <DevIcons stacks={stack} />
+          <br />
           <a href={link} target='_blank' rel='noopener noreferrer'>
             <button>See Live</button>
           </a>

@@ -1,3 +1,7 @@
+:root {
+  --button-color: #F7DF1E;
+}
+
 .particles {
   position: fixed;
   top: 0;
@@ -9,5 +13,6 @@
 
 .devicon-large {
   height: 60px;
+  width: 60px;
   margin: 15px;
 }

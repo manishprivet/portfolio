@@ -4,7 +4,7 @@ function ProfilePhoto() {
   return (
     <div>
       <img
-        src={require("../../images/profile.jpg")}
+        src={require("../../images/profile.jpeg")}
         height='200px'
         alt=''
         style={{

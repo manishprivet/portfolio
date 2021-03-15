@@ -11,6 +11,7 @@ function ProjectCard({
   image,
   direction,
   stack,
+  github,
 }: projectType) {
   return (
     <div className='main' style={{ flexDirection: direction }}>
@@ -23,6 +24,11 @@ function ProjectCard({
           <a href={link} target='_blank' rel='noopener noreferrer'>
             <button>See Live</button>
           </a>
+          {github && (
+            <a href={github} target='_blank' rel='noopener noreferrer'>
+              <button className='view-code-button'>View Code</button>
+            </a>
+          )}
         </div>
       </div>
       <div className='image'>
@@ -31,7 +37,6 @@ function ProjectCard({
             <div className='cardImageDiv'>
               <img
                 src={require(`../../images/${image}`)}
-                // src={`https://api.apiflash.com/v1/urltoimage?access_key=acefca5c960c4ad7a080fe271936a32c&url=${link}`}
                 alt=''
                 className='cardImage'
               />

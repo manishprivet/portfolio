@@ -46,21 +46,32 @@ h3 {
 button {
   padding: 15px 50px;
   margin: 10px;
-  border: solid 2px palevioletred;
+  border: solid 2px var(--button-color);
   background: none;
   border-radius: 30px;
   cursor: pointer;
   color: #fff;
 }
 
+.view-code-button {
+  background-color: var(--button-color);
+  color: #000;
+}
+
 button:hover {
-  background-color: palevioletred;
+  background-color: var(--button-color);
+  color: black;
+}
+
+.view-code-button:hover {
+  background-color: transparent;
 }
 
 .devicon {
   max-width: 10em;
   height: 35px;
-  margin: 0 10px;
+  width: 35px;
+  margin: 5px 10px;
 }
 
 @media only screen and (max-width: 1024px) {

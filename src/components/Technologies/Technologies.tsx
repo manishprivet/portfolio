@@ -7,9 +7,11 @@ const stacks: Array<stackTypes> = [
   "TypeScript",
   "React",
   "NextJS",
+  "Gatsby",
   "Redux",
   "Mongo",
   "GithubActions",
+  "Firebase",
   "AWS",
   "Babel",
   "CSS",
@@ -34,9 +36,12 @@ const stacks: Array<stackTypes> = [
   "Sentry",
   "Ubuntu",
   "Vercel",
+  "Netlify",
   "WebAssembly",
   "WebPack",
   "WireGuard",
+  "Jest",
+  "DialogFlow",
 ];
 
 export default () => {
@@ -57,7 +62,7 @@ export default () => {
         }}
       >
         <h1>Technologies I know of</h1>
-        <DevIcons className='devicon-large' stacks={stacks} />
+        <DevIcons className='devicon-large' stacks={stacks.sort()} />
       </div>
     </div>
   );

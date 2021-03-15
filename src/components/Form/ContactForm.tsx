@@ -2,6 +2,7 @@ import React, { useState, FormEvent, ChangeEvent } from "react";
 import { Axios, db } from "../../firebase/firebaseConfig";
 import { firestore } from "firebase";
 import styles from "./ContactForm.module.scss";
+import Spinner from "../Spinner";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,8 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const updateInput = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -18,14 +21,17 @@ const ContactForm = () => {
       [e.target.name]: e.target.value,
     });
   };
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    sendEmail();
+    setLoading(true);
+    await sendEmail();
     setFormData({
       name: "",
       email: "",
       message: "",
     });
+    setLoading(false);
+    setSubmitted(true);
   };
   const sendEmail = async () => {
     try {
@@ -44,9 +50,19 @@ const ContactForm = () => {
     }
   };
 
+  if (submitted)
+    return (
+      <div className={styles.thankYouContainer}>
+        <h1>Thank you for contacting me {`;)`}</h1>
+        <h2>Will get back to you soon</h2>
+      </div>
+    );
+
+  if (loading) return <Spinner />;
+
   return (
-    <>
-      <h1 style={{ textAlign: "center" }}>Have any queries?</h1>
+    <div className={styles.formContainer}>
+      <h1>Have any queries?</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type='text'
@@ -70,7 +86,7 @@ const ContactForm = () => {
         ></textarea>
         <button type='submit'>Submit</button>
       </form>
-    </>
+    </div>
   );
 };
 

@@ -25,6 +25,14 @@ export const projects = [
     stack: ["JavaScript", "React", "NextJS", "NodeJS", "Mongo", "AWS"],
   } as projectType,
   {
+    title: "Word Ladder",
+    content: `An AI based Web App/Game which uses Search Algorithms and a Word Dictionary to play the popular Word Game`,
+    link: "https://qord-ladder.manish.codes",
+    image: "word-ladder.png",
+    github: "https://github.com/manishprivet/word-ladder",
+    stack: ["TypeScript", "Svelte", "Vercel"],
+  } as projectType,
+  {
     title: "Fab Fashion",
     content: `A sample E-commerce site project with an attractive UI, and features like shopping cart, google/email authentication and payment with stripe`,
     link: "https://fab.manish.codes",

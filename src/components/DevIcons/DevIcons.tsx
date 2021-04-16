@@ -37,6 +37,7 @@ import {
   SiGatsby,
   SiFirebase,
   SiMarkdown,
+  SiSvelte,
 } from "react-icons/si";
 import { ReactComponent as VercelIcon } from "../../Stack/vercel.svg";
 import { ReactComponent as DynamoDBIcon } from "../../Stack/aws-dynamodb.svg";
@@ -96,6 +97,7 @@ export default ({
     Jest: <SiJest fill='#C21325' {...rest} />,
     Netlify: <SiNetlify fill='#00C7B7' {...rest} />,
     DialogFlow: <DialogFlowIcon fill='#FF9800' {...rest} />,
+    Svelte: <SiSvelte fill='#FF3E00' {...rest} />,
   };
 
   const icons = stacks.map((s) => iconList[s as stackTypes]);

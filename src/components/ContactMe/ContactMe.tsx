@@ -42,6 +42,14 @@ function ContactMe() {
         >
           <img src={require("../../images/twitter.png")} alt='' width='50px' />
         </a>
+        <a
+          className='social-link'
+          href='https://www.linkedin.com/in/manishprivet'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <img src={require("../../images/linkedin.png")} alt='' width='50px' />
+        </a>
       </div>
     </div>
   );

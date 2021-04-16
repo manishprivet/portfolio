@@ -50,4 +50,5 @@ export type stackTypes =
   | "Markdown"
   | "Jest"
   | "Netlify"
-  | "DialogFlow";
+  | "DialogFlow"
+  | "Svelte";

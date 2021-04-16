@@ -42,6 +42,7 @@ const stacks: Array<stackTypes> = [
   "WireGuard",
   "Jest",
   "DialogFlow",
+  "Svelte",
 ];
 
 export default () => {

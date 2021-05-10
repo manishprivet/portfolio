@@ -6,7 +6,6 @@ const stacks: Array<stackTypes> = [
   "JavaScript",
   "TypeScript",
   "React",
-  "NextJS",
   "Gatsby",
   "Redux",
   "Mongo",

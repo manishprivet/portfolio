@@ -51,4 +51,5 @@ export type stackTypes =
   | "Jest"
   | "Netlify"
   | "DialogFlow"
-  | "Svelte";
+  | "Svelte"
+  | "Deno";

@@ -7,7 +7,7 @@ function Projects() {
   let dir_counter = 0,
     direction: "row" | "row-reverse" = "row";
   return (
-    <div className='main-div'>
+    <div id='projects' className='main-div'>
       <h1 className='header'>My Projects</h1>
       {projects.map((project) => {
         dir_counter++;

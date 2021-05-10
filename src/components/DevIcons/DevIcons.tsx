@@ -38,6 +38,7 @@ import {
   SiFirebase,
   SiMarkdown,
   SiSvelte,
+  SiDeno,
 } from "react-icons/si";
 import { ReactComponent as VercelIcon } from "../../Stack/vercel.svg";
 import { ReactComponent as DynamoDBIcon } from "../../Stack/aws-dynamodb.svg";
@@ -54,7 +55,7 @@ export default ({
   const rest = {
     className,
   };
-  const iconList: Record<stackTypes, any> = {
+  const iconList: Record<stackTypes, JSX.Element> = {
     Go: <SiGo fill='#00ADD8' {...rest} />,
     JavaScript: <SiJavascript fill='#F7DF1E' {...rest} />,
     Python: <SiPython fill='#3776AB' {...rest} />,
@@ -98,8 +99,15 @@ export default ({
     Netlify: <SiNetlify fill='#00C7B7' {...rest} />,
     DialogFlow: <DialogFlowIcon fill='#FF9800' {...rest} />,
     Svelte: <SiSvelte fill='#FF3E00' {...rest} />,
+    Deno: <SiDeno fill='#FEFEFE' {...rest} />,
   };
 
-  const icons = stacks.map((s) => iconList[s as stackTypes]);
+  const icons = stacks.map((s) => {
+    // Add Title to SVG
+    const Icon = Object.assign({}, iconList[s], {
+      props: { ...iconList[s].props, title: s },
+    });
+    return Icon;
+  });
   return <div style={{ margin: "0 10px" }}>{icons}</div>;
 };

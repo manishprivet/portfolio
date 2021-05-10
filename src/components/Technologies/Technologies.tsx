@@ -43,11 +43,13 @@ const stacks: Array<stackTypes> = [
   "Jest",
   "DialogFlow",
   "Svelte",
+  "Deno",
 ];
 
 export default () => {
   return (
     <div
+      id='technologies'
       style={{
         width: "100%",
         background: "rgba(255, 255, 255, 0.1)",
@@ -62,7 +64,7 @@ export default () => {
           margin: "auto",
         }}
       >
-        <h1>Technologies I know of</h1>
+        <h1>Technologies I know</h1>
         <DevIcons className='devicon-large' stacks={stacks.sort()} />
       </div>
     </div>

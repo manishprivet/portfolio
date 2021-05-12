@@ -27,7 +27,7 @@ export const projects = [
   {
     title: "Word Ladder",
     content: `An AI based Web App/Game which uses Search Algorithms and a Word Dictionary to play the popular Word Game`,
-    link: "https://qord-ladder.manishk.dev",
+    link: "https://word-ladder.manishk.dev",
     image: "word-ladder.png",
     github: "https://github.com/manishprivet/word-ladder",
     stack: ["TypeScript", "Svelte", "Vercel"],

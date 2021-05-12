@@ -1,7 +1,7 @@
 <p align="justify">
 
 [![Maintenance](https://img.shields.io/maintenance/yes/2020?style=for-the-badge)](https://gitHub.com/manishprivet/aboutme) ![GitHub last commit](https://img.shields.io/github/last-commit/manishprivet/aboutme?style=for-the-badge)
-[![Website](https://img.shields.io/website?down_color=blue&down_message=rocking&style=for-the-badge&up_color=blue&up_message=rocking&url=https%3A%2F%2Fmanish.codes%2F)](https://manish.codes)
+[![Website](https://img.shields.io/website?down_color=blue&down_message=rocking&style=for-the-badge&up_color=blue&up_message=rocking&url=https%3A%2F%2Fmanishk.dev%2F)](https://manishk.dev)
 ![David](https://img.shields.io/david/manishprivet/aboutme?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/manishprivet/aboutme?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/manishprivet/aboutme?style=for-the-badge)
@@ -17,6 +17,7 @@
 <br>
 
 [![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://github.com/manishprivet/)
+
 </p>
 
 ## installation
@@ -35,7 +36,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deployment
 
-The project is deployed on Vercel and available at [manish.codes](https://manish.codes).
+The project is deployed on Vercel and available at [manishk.dev](https://manishk.dev).
 
 ## Developer Information
 

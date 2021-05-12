@@ -4,7 +4,7 @@ export const projects = [
   {
     title: "Codex",
     content: `My own personal blog, made with <3 and Gatsby, with features like markdown blog, dynamic code highlighting and code blocks`,
-    link: "https://blog.manish.codes",
+    link: "https://blog.manishk.dev",
     image: "codex.png",
     stack: ["TypeScript", "React", "Gatsby", "Netlify", "Markdown"],
     github: "https://github.com/manishprivet/codex",
@@ -12,7 +12,7 @@ export const projects = [
   {
     title: "Electify",
     content: `A web app created for creating anonymous elections, voting and sharing results.`,
-    link: "https://electify.manish.codes",
+    link: "https://electify.manishk.dev",
     image: "electify.jpeg",
     stack: ["TypeScript", "React", "NextJS", "NodeJS", "Vercel", "DynamoDB"],
     github: "https://github.com/manishprivet/electify",
@@ -27,7 +27,7 @@ export const projects = [
   {
     title: "Word Ladder",
     content: `An AI based Web App/Game which uses Search Algorithms and a Word Dictionary to play the popular Word Game`,
-    link: "https://qord-ladder.manish.codes",
+    link: "https://qord-ladder.manishk.dev",
     image: "word-ladder.png",
     github: "https://github.com/manishprivet/word-ladder",
     stack: ["TypeScript", "Svelte", "Vercel"],
@@ -35,7 +35,7 @@ export const projects = [
   {
     title: "Fab Fashion",
     content: `A sample E-commerce site project with an attractive UI, and features like shopping cart, google/email authentication and payment with stripe`,
-    link: "https://fab.manish.codes",
+    link: "https://fab.manishk.dev",
     image: "fab-fashion.png",
     github: "https://github.com/manishprivet/fab-fashion",
     stack: ["TypeScript", "React", "Firebase"],

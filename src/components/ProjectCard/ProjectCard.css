@@ -65,6 +65,7 @@ button:hover {
 
 .view-code-button:hover {
   background-color: transparent;
+  color: white;
 }
 
 .devicon {

@@ -5,6 +5,7 @@ const cors = require("cors")({
 });
 const gmailEmail = functions.config().gmail.email;
 const gmailPassword = functions.config().gmail.password;
+const CONTACT_MAIL = "contact@manishk.dev";
 
 const mailTransport = nodemailer.createTransport({
   service: "gmail",
@@ -30,7 +31,7 @@ exports.submit = functions.https.onRequest((req, res) => {
       const mailOptions = {
         from: req.body.email,
         replyTo: req.body.email,
-        to: gmailEmail,
+        to: CONTACT_MAIL,
         subject: `${req.body.name} just messaged me from my website`,
         text: req.body.message,
         html: `<p>${req.body.message}</p>`,
@@ -46,11 +47,3 @@ exports.submit = functions.https.onRequest((req, res) => {
     });
   }
 });
-
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });

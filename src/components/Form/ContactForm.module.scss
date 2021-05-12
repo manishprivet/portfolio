@@ -1,6 +1,5 @@
 .formContainer {
   text-align: center;
-  max-height: 380px;
   min-height: 380px;
   padding: 40px 0;
 
@@ -19,6 +18,11 @@
       outline: none;
       border: 1px solid white;
       color: white;
+    }
+
+    p {
+      color: red;
+      font-size: 1.2em;
     }
   }
 }

@@ -12,6 +12,7 @@ const ContactForm = () => {
   });
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const updateInput = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -23,6 +24,10 @@ const ContactForm = () => {
   };
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const { name, email, message } = formData;
+    if (!name || !email || !message)
+      return setError("Please fill all the fields");
+    setError("");
     setLoading(true);
     await sendEmail();
     setFormData({
@@ -84,6 +89,7 @@ const ContactForm = () => {
           onChange={updateInput}
           value={formData.message || ""}
         ></textarea>
+        {error && <p>{error}</p>}
         <button type='submit'>Submit</button>
       </form>
     </div>

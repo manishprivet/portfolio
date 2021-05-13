@@ -39,7 +39,7 @@ exports.submit = functions.https.onRequest((req, res) => {
       };
 
       return mailTransport.sendMail(mailOptions).then(async () => {
-        console.log("New email sent to:", gmailEmail);
+        console.log("New email sent to:", CONTACT_MAIL);
         res.status(200).send({
           isEmailSend: true,
         });

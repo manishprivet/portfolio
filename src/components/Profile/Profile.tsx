@@ -21,6 +21,9 @@ function Profile() {
             <span style={{ color: "#f9bc60" }}>Cloud Architect</span>
           </TextLoop>{" "}
         </h2>
+        <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'>
+          Resume
+        </a>
       </div>
       <ProfilePhoto />
     </div>

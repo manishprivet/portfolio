@@ -5,7 +5,7 @@
 ![David](https://img.shields.io/david/manishprivet/portfolio?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/manishprivet/portfolio?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/manishprivet/portfolio?style=for-the-badge)
-![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/manishprivet/electify/react?style=for-the-badge)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/manishprivet/portfolio/react?style=for-the-badge)
 <br>
 
 [![forthebadge made-with-typescript](https://img.shields.io/badge/Made%20With-Typescript-blue?style=for-the-badge)](https://www.typescriptlang.org/)

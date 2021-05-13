@@ -1,6 +1,5 @@
 import { useState, FormEvent, ChangeEvent } from "react";
-import { Axios, db } from "../../firebase/firebaseConfig";
-import { firestore } from "firebase";
+import Axios from "axios";
 import styles from "./ContactForm.module.scss";
 import Spinner from "../Spinner";
 import { Button } from "../Primitives/Button";
@@ -46,12 +45,6 @@ const ContactForm = () => {
         "https://us-central1-portfolio-3af99.cloudfunctions.net/submit",
         formData
       );
-      await db.collection("emails").add({
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-        time: new Date(),
-      } as firestore.DocumentData);
     } catch (err) {
       console.log(err);
     }

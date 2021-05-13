@@ -1,26 +1,35 @@
 import styles from "./App.module.scss";
 import Profile from "../components/Profile/Profile";
-import Projects from "../components/Projects/Projects";
 import tsParticlesConfig from "../data/tsParticles.json";
 import ContactMe from "../components/ContactMe/ContactMe";
-import Particles, { IOptions, RecursivePartial } from "react-tsparticles";
 import ContactForm from "../components/Form/ContactForm";
-import Technologies from "../components/Technologies/Technologies";
+import { Suspense, lazy } from "react";
+import Spinner from "../components/Spinner";
+import { IOptions, RecursivePartial } from "tsparticles";
 
-function App() {
-  return (
-    <div className='App'>
+const Technologies = lazy(
+  () => import("../components/Technologies/Technologies")
+);
+
+const Projects = lazy(() => import("../components/Projects/Projects"));
+const Particles = lazy(() => import("react-tsparticles"));
+
+const App = () => (
+  <div className='App'>
+    <Suspense fallback={null}>
       <Particles
         className={styles.particles}
         options={tsParticlesConfig as unknown as RecursivePartial<IOptions>}
       />
-      <Profile />
+    </Suspense>
+    <Profile />
+    <Suspense fallback={<Spinner />}>
       <Technologies />
       <Projects />
-      <ContactForm />
-      <ContactMe />
-    </div>
-  );
-}
+    </Suspense>
+    <ContactForm />
+    <ContactMe />
+  </div>
+);
 
 export default App;

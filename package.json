@@ -12,9 +12,9 @@
     "@types/react": "^16.9.45",
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.9",
+    "@types/node-fetch": "^2.5.8",
     "@vercel/node": "^1.9.1",
     "axios": "^0.19.2",
-    "firebase": "^7.17.2",
     "node-fetch": "^2.6.1",
     "node-sass": "^4.14.1",
     "react": "^17.0.0",
@@ -50,18 +50,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-react": "^7.9.0",
-    "@types/node-fetch": "^2.5.8"
-  },
-  "presets": [
-    [
-      "@babel/preset-react",
-      {
-        "runtime": "automatic"
-      }
-    ]
-  ]
+  }
 }

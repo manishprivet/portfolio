@@ -1,14 +1,13 @@
-import React from "react";
 import ProfilePhoto from "../ProfilePhoto/ProfilePhoto";
 import TextLoop from "react-text-loop";
-import "./Profile.css";
+import styles from "./Profile.module.scss";
 
 function Profile() {
   return (
-    <div className='profileCard'>
-      <div className='profileText'>
+    <div className={styles.profileCard}>
+      <div className={styles.profileText}>
         <h1>
-          <span className='hello'>Hello</span>
+          <span className={styles.hello}>Hello</span>
           <br />
           My name is Manish...
         </h1>

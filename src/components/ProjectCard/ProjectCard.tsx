@@ -1,8 +1,10 @@
-import React from "react";
-import "./ProjectCard.css";
+import styles from "./ProjectCard.module.scss";
 import Tilt from "react-tilt";
-import { projectType } from "../../interfaces/Project";
+import { projectType } from "../../interfaces";
 import DevIcons from "../DevIcons/DevIcons";
+import { Button, ButtonAlternate } from "../Primitives/Button";
+import { RoundedImage } from "../Primitives/Images";
+import { LinkToNewTab } from "../Primitives/Link";
 
 function ProjectCard({
   title,
@@ -14,32 +16,28 @@ function ProjectCard({
   github,
 }: projectType) {
   return (
-    <div className='main' style={{ flexDirection: direction }}>
-      <div className='description'>
-        <div className='cardText'>
+    <div className={styles.main} style={{ flexDirection: direction }}>
+      <div className={styles.description}>
+        <div className={styles.cardText}>
           <h1>{title}</h1>
           <h3>{content}</h3>
-          <DevIcons className='devicon' stacks={stack} />
+          <DevIcons className={styles.devicon} stacks={stack} />
           <br />
-          <a href={link} target='_blank' rel='noopener noreferrer'>
-            <button>See Live</button>
-          </a>
+          <LinkToNewTab href={link}>
+            <Button>See Live</Button>
+          </LinkToNewTab>
           {github && (
-            <a href={github} target='_blank' rel='noopener noreferrer'>
-              <button className='view-code-button'>View Code</button>
-            </a>
+            <LinkToNewTab href={github}>
+              <ButtonAlternate>View Code</ButtonAlternate>
+            </LinkToNewTab>
           )}
         </div>
       </div>
-      <div className='image'>
+      <div className={styles.image}>
         <Tilt className='Tilt' options={{ max: 10, scale: 1 }}>
           <div className='Tilt-inner'>
-            <div className='cardImageDiv'>
-              <img
-                src={require(`../../images/${image}`)}
-                alt=''
-                className='cardImage'
-              />
+            <div className={styles.cardImageDiv}>
+              <RoundedImage src={`images/${image}`} alt='' />
             </div>
           </div>
         </Tilt>

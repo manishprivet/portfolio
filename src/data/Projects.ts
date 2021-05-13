@@ -1,4 +1,4 @@
-import { projectType } from "../interfaces/Project";
+import { projectType } from "../interfaces";
 
 export const projects = [
   {

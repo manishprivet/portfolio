@@ -1,3 +1,5 @@
+import { IconType } from "react-icons/lib";
+
 export interface projectType {
   title: string;
   content: string;
@@ -53,3 +55,8 @@ export type stackTypes =
   | "DialogFlow"
   | "Svelte"
   | "Deno";
+
+export interface SocialMediaLink {
+  url: string;
+  icon: IconType;
+}

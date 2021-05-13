@@ -1,5 +1,4 @@
-import React from "react";
-import "./App.css";
+import styles from "./App.module.scss";
 import Profile from "../components/Profile/Profile";
 import Projects from "../components/Projects/Projects";
 import tsParticlesConfig from "../data/tsParticles.json";
@@ -12,7 +11,7 @@ function App() {
   return (
     <div className='App'>
       <Particles
-        className='particles'
+        className={styles.particles}
         options={tsParticlesConfig as unknown as RecursivePartial<IOptions>}
       />
       <Profile />

@@ -11,20 +11,22 @@
     "@types/node": "^14.0.27",
     "@types/react": "^16.9.45",
     "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.9",
     "@vercel/node": "^1.9.1",
     "axios": "^0.19.2",
     "firebase": "^7.17.2",
     "node-fetch": "^2.6.1",
     "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.0",
+    "react-dom": "17.0.0",
     "react-icons": "^4.2.0",
     "react-particles-js": "^2.7.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^4.0.3",
     "react-text-loop": "^2.3.0",
     "react-tilt": "^0.1.4",
     "react-tsparticles": "^1.17.6",
-    "typescript": "^3.9.7"
+    "styled-components": "^5.3.0",
+    "typescript": "^4.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -49,6 +51,16 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-react": "^7.9.0",
     "@types/node-fetch": "^2.5.8"
-  }
+  },
+  "presets": [
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ]
+  ]
 }

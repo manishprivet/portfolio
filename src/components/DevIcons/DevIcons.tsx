@@ -1,4 +1,3 @@
-import React from "react";
 import {
   SiJavascript,
   SiGo,
@@ -43,25 +42,21 @@ import {
 import { ReactComponent as VercelIcon } from "../../Stack/vercel.svg";
 import { ReactComponent as DynamoDBIcon } from "../../Stack/aws-dynamodb.svg";
 import { ReactComponent as DialogFlowIcon } from "../../Stack/dialogflow.svg";
-import { stackTypes } from "../../interfaces/Project";
+import { stackTypes } from "../../interfaces";
 
-export default ({
-  stacks,
-  className,
-}: {
-  stacks: Array<stackTypes>;
+interface Props {
+  stacks: stackTypes[];
   className: string;
-}) => {
-  const rest = {
-    className,
-  };
+}
+
+const DevIcons = ({ stacks, className }: Props) => {
+  const rest = { className };
   const iconList: Record<stackTypes, JSX.Element> = {
     Go: <SiGo fill='#00ADD8' {...rest} />,
     JavaScript: <SiJavascript fill='#F7DF1E' {...rest} />,
     Python: <SiPython fill='#3776AB' {...rest} />,
     CSS: <SiCss3 fill='#1572B6' {...rest} />,
     HTML: <SiHtml5 fill='#E34F26' {...rest} />,
-
     React: <SiReact fill='#61DAFB' {...rest} />,
     NodeJS: <SiNodeDotJs fill='#339933' {...rest} />,
     Docker: <SiDocker fill='#2496ED' {...rest} />,
@@ -109,5 +104,8 @@ export default ({
     });
     return Icon;
   });
+
   return <div style={{ margin: "0 10px" }}>{icons}</div>;
 };
+
+export default DevIcons;

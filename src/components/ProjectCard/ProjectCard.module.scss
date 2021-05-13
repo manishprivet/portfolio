@@ -1,0 +1,59 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100;
+  margin: 30px;
+
+  .description {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    .cardText {
+      padding: 10px 30px;
+
+      h3 {
+        text-align: justify;
+      }
+
+      .devicon {
+        max-width: 10em;
+        height: 35px;
+        width: 35px;
+        margin: 5px 10px;
+      }
+    }
+  }
+
+  .image {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    .cardImageDiv {
+      padding: 20px;
+
+      img {
+        width: 100%;
+        margin-top: auto;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
+
+    .description {
+      width: 100%;
+    }
+    .image {
+      width: 100%;
+    }
+  }
+}

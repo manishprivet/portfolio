@@ -1,20 +1,14 @@
-import React from "react";
+import { CircularImage } from "../Primitives/Images";
 
-function ProfilePhoto() {
-  return (
-    <div>
-      <img
-        src={require("../../images/profile.jpeg")}
-        height='200px'
-        alt=''
-        style={{
-          border: "none",
-          borderRadius: "50%",
-          boxShadow: "2px 2px 10px black",
-        }}
-      />
-    </div>
-  );
-}
+const ProfilePhoto = () => (
+  <div>
+    <CircularImage
+      src='images/profile.jpeg'
+      height='200px'
+      alt='Profile Image'
+      title='Profile Image'
+    />
+  </div>
+);
 
 export default ProfilePhoto;

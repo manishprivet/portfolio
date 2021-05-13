@@ -1,8 +1,10 @@
-import React, { useState, FormEvent, ChangeEvent } from "react";
+import { useState, FormEvent, ChangeEvent } from "react";
 import { Axios, db } from "../../firebase/firebaseConfig";
 import { firestore } from "firebase";
 import styles from "./ContactForm.module.scss";
 import Spinner from "../Spinner";
+import { Button } from "../Primitives/Button";
+import { TextInput, TextArea } from "../Primitives/Inputs";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -69,28 +71,28 @@ const ContactForm = () => {
     <div className={styles.formContainer}>
       <h1>Have any queries?</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <input
+        <TextInput
           type='text'
           name='name'
           placeholder='Name'
           onChange={updateInput}
           value={formData.name || ""}
         />
-        <input
+        <TextInput
           type='email'
           name='email'
           placeholder='Email'
           onChange={updateInput}
           value={formData.email || ""}
         />
-        <textarea
+        <TextArea
           name='message'
           placeholder='Message'
           onChange={updateInput}
           value={formData.message || ""}
-        ></textarea>
+        />
         {error && <p>{error}</p>}
-        <button type='submit'>Submit</button>
+        <Button type='submit'>Submit</Button>
       </form>
     </div>
   );

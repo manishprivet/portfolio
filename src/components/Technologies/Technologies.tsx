@@ -1,71 +1,16 @@
-import React from "react";
-import { stackTypes } from "../../interfaces/Project";
 import DevIcons from "../DevIcons/DevIcons";
+import { stacks } from "../../data/Technologies";
+import styles from "./Technologies.module.scss";
 
-const stacks: Array<stackTypes> = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Gatsby",
-  "Redux",
-  "Mongo",
-  "GithubActions",
-  "Firebase",
-  "AWS",
-  "Babel",
-  "CSS",
-  "DigitalOcean",
-  "Docker",
-  "DynamoDB",
-  "GCP",
-  "Git",
-  "Github",
-  "Gitlab",
-  "Gnome",
-  "Go",
-  "Heroku",
-  "Linux",
-  "Mocha",
-  "NextJS",
-  "NodeJS",
-  "PostgreSQL",
-  "Python",
-  "Rust",
-  "Saas",
-  "Sentry",
-  "Ubuntu",
-  "Vercel",
-  "Netlify",
-  "WebAssembly",
-  "WebPack",
-  "WireGuard",
-  "Jest",
-  "DialogFlow",
-  "Svelte",
-  "Deno",
-];
-
-export default () => {
+const Technologies = () => {
   return (
-    <div
-      id='technologies'
-      style={{
-        width: "100%",
-        background: "rgba(255, 255, 255, 0.1)",
-        padding: "40px 0",
-      }}
-    >
-      <div
-        style={{
-          width: "75%",
-          color: "white",
-          textAlign: "center",
-          margin: "auto",
-        }}
-      >
+    <div className={styles.container}>
+      <div>
         <h1>Technologies I know</h1>
-        <DevIcons className='devicon-large' stacks={stacks.sort()} />
+        <DevIcons className={styles.largeIcon} stacks={stacks.sort()} />
       </div>
     </div>
   );
 };
+
+export default Technologies;

@@ -28,24 +28,24 @@ jobs:
           do
             echo $file
             if [[ $file != functions/* ]]; then
-              echo "This modified file is not under the 'db' folder."
-              echo "::set-output name=run_job::false"
-              break
+              continue
             else
+              echo "This modified file is under the 'functions' folder."
               echo "::set-output name=run_job::true"
+              break
             fi
           done < files.txt
   
   build:
     name: Build
+    needs: check
+    if: needs.check.outputs.run_job == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-      - name: Change Directory
-        run: cd functions
       - name: Install Dependencies
-        run: npm install
+        run: cd ./functions && npm install
       - name: Build
         run: npm run build
         

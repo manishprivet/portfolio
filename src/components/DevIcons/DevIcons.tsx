@@ -1,5 +1,5 @@
 import { stackTypes, Technology } from "../../interfaces";
-import { Technologies } from "../../data/Technolgies";
+import { Technologies } from "../../data/TechnologyInfo";
 import ReactTooltip from "react-tooltip";
 import { LinkToNewTab } from "../Primitives/Link";
 

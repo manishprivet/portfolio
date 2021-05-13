@@ -15,4 +15,16 @@
     width: 60px;
     margin: 15px;
   }
+
+  @media only screen and (max-width: 600px) {
+    & > div {
+      width: 90%;
+    }
+
+    .largeIcon {
+      height: 45px;
+      width: 45px;
+      margin: 10px;
+    }
+  }
 }

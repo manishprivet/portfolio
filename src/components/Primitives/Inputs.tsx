@@ -9,6 +9,10 @@ const style = css`
   outline: none;
   border: 1px solid white;
   color: white;
+
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+  }
 `;
 
 export const TextInput = styled.input`

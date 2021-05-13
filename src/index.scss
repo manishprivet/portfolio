@@ -16,4 +16,25 @@ code {
 
 :root {
   --button-color: #f7df1e;
+  --text-color: #fefefe;
+}
+
+.tooltip {
+  max-width: 300px;
+  width: auto;
+  background: rgba($color: #000000, $alpha: 1) !important;
+  border: none;
+  border-radius: 15px !important;
+  opacity: 1 !important;
+  transition: none !important;
+  line-height: 1.5em;
+  font-size: 1.1rem !important;
+
+  a {
+    color: var(--button-color);
+  }
+
+  h4 {
+    margin: 5px 0;
+  }
 }

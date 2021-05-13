@@ -1,3 +1,4 @@
+import { FunctionComponent, SVGProps } from "react";
 import { IconType } from "react-icons/lib";
 
 export interface projectType {
@@ -20,7 +21,6 @@ export type stackTypes =
   | "NodeJS"
   | "Docker"
   | "Mongo"
-  | "Webpack"
   | "Saas"
   | "Heroku"
   | "AWS"
@@ -59,4 +59,17 @@ export type stackTypes =
 export interface SocialMediaLink {
   url: string;
   icon: IconType;
+}
+
+export enum ColorTypes {
+  DEFAULT = "var(--text-color)",
+  NONE = "",
+}
+
+export interface Technology {
+  name: stackTypes;
+  Icon: IconType | FunctionComponent<SVGProps<SVGSVGElement>>;
+  url: string;
+  description: string;
+  primaryColor: string | ColorTypes;
 }

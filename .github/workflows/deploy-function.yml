@@ -47,7 +47,7 @@ jobs:
       - name: Install Dependencies
         run: cd ./functions && npm install
       - name: Build
-        run: npm run build
+        run: cd ./functions && npm run build
         
   deploy:
     name: Deploy

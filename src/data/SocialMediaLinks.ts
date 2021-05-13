@@ -6,10 +6,15 @@ import {
   SiMedium,
   SiStackoverflow,
   SiTwitter,
+  SiGmail,
 } from "react-icons/si";
 import { SocialMediaLink } from "../interfaces";
 
 export const SocialMediaLinks: SocialMediaLink[] = [
+  {
+    icon: SiGmail,
+    url: "mailto:me@manishk.dev",
+  },
   {
     icon: SiGithub,
     url: "https://github.com/manishprivet",

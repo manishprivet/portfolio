@@ -35,11 +35,9 @@ jobs:
               break
             fi
           done < files.txt
-  
-  build:
-    name: Build
-    needs: check
-    if: needs.check.outputs.run_job == 'true'
+        
+  deploy:
+    name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -48,14 +46,6 @@ jobs:
         run: cd ./functions && npm install
       - name: Build
         run: cd ./functions && npm run build
-        
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:

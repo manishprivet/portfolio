@@ -33,9 +33,9 @@ exports.submit = functions.https.onRequest((req, res) => {
         from: req.body.email,
         replyTo: req.body.email,
         to: CONTACT_MAIL,
-        subject: `${req.body.name} just messaged me from my website`,
+        subject: `Someone just messaged you from your website`,
         text: req.body.message,
-        html: `<p>${req.body.message}</p>`,
+        html: `<h1>${req.body.name}</h1><p>${req.body.message}</p>`,
       };
 
       return mailTransport.sendMail(mailOptions).then(async () => {

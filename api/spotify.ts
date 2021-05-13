@@ -15,8 +15,9 @@ const SPOTIFY_URL_RECENTLY_PLAY =
 const handler = async (_: VercelRequest, res: VercelResponse) => {
   const token = await refreshToken();
   let data = await nowPlaying(token);
+  const type = data ? "Now Playing" : "Recently Played";
   if (!data) data = await recentlyPlayed(token);
-  res.status(200).json(data);
+  res.status(200).json({ data, type });
 };
 
 const getAuth = () =>

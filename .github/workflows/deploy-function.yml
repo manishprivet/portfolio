@@ -38,6 +38,8 @@ jobs:
         
   deploy:
     name: Build and Deploy
+    needs: check
+    if: needs.check.outputs.run_job == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo

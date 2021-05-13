@@ -1,12 +1,13 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
+import { config as getConfig } from "firebase-functions";
 
-const FIREBASE_API_KEY = "AIzaSyAjK9HyAAsWzctR2JpXL-2H9-6Alj5EamM";
-const FIREBASE_AUTH_DOMAIN = "portfolio-3af99.firebaseapp.com";
-const FIREBASE_DATABASE_URL = "https://portfolio-3af99.firebaseio.com";
-const FIREBASE_PROJECT_ID = "portfolio-3af99";
-const FIREBASE_STORAGE_BUCKET = "portfolio-3af99.appspot.com";
-const FIREBASE_MESSAGING_SENDER_ID = "99757100461";
+const FIREBASE_API_KEY = getConfig().config.api_key as string;
+const FIREBASE_AUTH_DOMAIN = getConfig().config.auth_domain as string;
+const FIREBASE_DATABASE_URL = getConfig().config.database_url as string;
+const FIREBASE_PROJECT_ID = getConfig().config.project_id as string;
+const FIREBASE_STORAGE_BUCKET = getConfig().config.storage_bucket as string;
+const FIREBASE_MESSAGING_SENDER_ID = getConfig().config.messaging_id as string;
 
 // Initialize Firebase
 const config = {

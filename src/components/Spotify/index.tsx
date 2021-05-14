@@ -31,7 +31,7 @@ const Spotify = () => {
         {!loading && (
           <p>
             {data?.type === "now"
-              ? `Currently listening to `
+              ? `Am currently listening to `
               : `Recently listened to `}
             <br />
             <LinkToNewTab href={data?.data.url}>

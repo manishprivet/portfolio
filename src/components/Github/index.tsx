@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { userDetails } from "../../../@types/interfaces";
 import Graph from "./Graph";
 import styles from "./styles.module.scss";
+import { LinkToNewTab } from "../Primitives/Link";
 
 type APIResponse = AxiosResponse<userDetails>;
 
@@ -29,7 +30,12 @@ const Github = () => {
   return (
     <>
       <section className={styles.infoContainer}>
-        <h2>I ❤️ Open Source</h2>
+        <h2>
+          I ❤️ Open Source and{" "}
+          <LinkToNewTab href='https://github.com/manishprivet' withIcon>
+            Github
+          </LinkToNewTab>
+        </h2>
         <p>
           and made a total of <span>{data?.totalContributions}</span>{" "}
           contributions in <span>{data?.contributedTo}</span> repos till now, in

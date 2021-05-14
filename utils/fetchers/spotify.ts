@@ -1,6 +1,10 @@
 import axios from "axios";
 import qs from "qs";
-import { SpotifyResponse, TrackDetails } from "../../@types/interfaces";
+import {
+  SpotifyAPIResponse,
+  SpotifyResponse,
+  TrackDetails,
+} from "../../@types/interfaces";
 
 const SPOTIFY_URL_REFRESH_TOKEN = "https://accounts.spotify.com/api/token";
 const SPOTIFY_URL_NOW_PLAYING =
@@ -56,17 +60,17 @@ export const fetchSpotifyData = async (
 ) => {
   const token = await getAccessToken(id, secret, refreshToken);
   let data = await nowPlaying(token);
-  const type = data.items[0].track ? "Now Playing" : "Recently Played";
+  const type = data.items[0].track ? "now" : "recent";
   if (!data.items[0].track) data = await recentlyPlayed(token);
   const track = data.items[0].track;
 
   const returnData: TrackDetails = {
     albumArt: track.album.images[0].url,
-    artist: track.artists.reduce((a, d) => a + d.name + " ", ""),
+    artist: track.artists.reduce((a, d) => a + d.name + ", ", ""),
     name: track.name,
     preview: track.preview_url,
     url: track.external_urls.spotify,
   };
 
-  return { data: returnData, type };
+  return { data: returnData, type } as SpotifyAPIResponse;
 };

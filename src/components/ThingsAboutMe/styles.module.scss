@@ -17,4 +17,8 @@
       width: 90%;
     }
   }
+
+  hr {
+    border-top: 1px dashed var(--text-color);
+  }
 }

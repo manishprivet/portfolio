@@ -23,6 +23,11 @@ export interface TrackDetails {
   artist: string;
 }
 
+export interface SpotifyAPIResponse {
+  type: "now" | "recent";
+  data: TrackDetails;
+}
+
 export interface contributionCount {
   contributionCount: number;
 }

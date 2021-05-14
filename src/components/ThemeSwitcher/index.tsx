@@ -60,8 +60,8 @@ const THEMES: Theme[] = [
     button: "#ff8ba7",
     buttonText: "#33272a",
     text: "#33272a",
-    darkShade: "rgba(114, 114, 114, 0.2)",
-    lightShade: "rgba(255, 255, 255, 0.1)",
+    darkShade: "rgba(59, 59, 59, 0.1)",
+    lightShade: "rgba(80, 80, 80, 0.2)",
   },
 ];
 

@@ -1,15 +1,14 @@
 import { FC } from "react";
 import styles from "./Spinner.module.scss";
 
-const Spinner: FC<unknown> = () => (
+interface Props {
+  text?: string;
+}
+
+const Spinner: FC<Props> = ({ text }) => (
   <div className={styles.container}>
-    <div>
-      {Array(9)
-        .fill(null)
-        .map((_) => (
-          <div />
-        ))}
-    </div>
+    <div className={styles.loader} />
+    {text && <h3>{text}</h3>}
   </div>
 );
 

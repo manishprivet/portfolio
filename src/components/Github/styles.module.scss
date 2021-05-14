@@ -1,3 +1,38 @@
-.tooltip {
-  padding: 10px 20px;
+.infoContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+
+  span {
+    color: var(--button-color);
+    font-weight: 800;
+  }
+
+  h2 {
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  ul {
+    margin-bottom: 30px;
+    padding: 0;
+
+    li {
+      list-style: none;
+      font-size: 1.2em;
+
+      &::before {
+        content: "\2933";
+        margin-right: 10px;
+      }
+    }
+  }
 }
+
+// .graphContainer {
+//   padding: 0 60px;
+// }

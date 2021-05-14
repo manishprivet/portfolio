@@ -1,11 +1,10 @@
 .container {
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--light-shade);
   padding: 40px 0;
 
   & > div {
     width: 75%;
-    color: white;
     text-align: center;
     margin: auto;
   }

@@ -4,6 +4,8 @@
   --background-color: #004643;
   --link-color: #abd1c6;
   --button-text-color: #001e1d;
+  --dark-shade: rgba(104, 104, 104, 0.2);
+  --light-shade: rgba(59, 59, 59, 0.1);
 }
 
 body {
@@ -22,6 +24,10 @@ code {
     monospace;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .tooltip {
   max-width: 300px;
   width: auto;
@@ -36,7 +42,12 @@ code {
   padding: 10px 20px !important;
 
   a {
-    color: var(--link-color);
+    color: var(--background-color);
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   h4 {

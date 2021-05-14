@@ -3,6 +3,7 @@ import axios, { AxiosResponse } from "axios";
 import { useState, useEffect } from "react";
 import { userDetails } from "../../../@types/interfaces";
 import Graph from "./Graph";
+import styles from "./styles.module.scss";
 
 type APIResponse = AxiosResponse<userDetails>;
 
@@ -23,29 +24,38 @@ const Github = () => {
     fetchData();
   }, []);
 
-  if (loading) return <Spinner />;
+  if (loading) return <Spinner text='Fetching Github Stats' />;
 
   return (
     <>
-      <section>
-        <h2>
-          I've made a total of {data?.totalContributions} contributions in{" "}
-          {data?.contributedTo} repos till now, in which
-        </h2>
+      <section className={styles.infoContainer}>
+        <h2>I ❤️ Open Source</h2>
+        <p>
+          and made a total of <span>{data?.totalContributions}</span>{" "}
+          contributions in <span>{data?.contributedTo}</span> repos till now, in
+          which I have
+        </p>
         <ul>
           <li>
-            {data?.commits} commits in {data?.commitRepos} repos
+            <span>{data?.commits}</span> commits in{" "}
+            <span>{data?.commitRepos}</span> repos
           </li>
           <li>
-            {data?.pullRequests} PRs in {data?.pullRequestRepos} repos
+            <span>{data?.pullRequests}</span> Pull Requests in{" "}
+            <span>{data?.pullRequestRepos}</span> repos
           </li>
           <li>
-            {data?.pullRequestReviews} code reviews in {data?.reviewRepos} repos
+            <span>{data?.pullRequestReviews}</span> code reviews in{" "}
+            <span>{data?.reviewRepos}</span> repos
           </li>
           <li>
-            raised {data?.issues} issues in {data?.issueRepos} repos
+            raised <span>{data?.issues}</span> issues in{" "}
+            <span>{data?.issueRepos}</span> repos
           </li>
-          <li>and created {data?.noOfRepositories} repositories of my own</li>
+          <li>
+            and created <span>{data?.noOfRepositories}</span> repositories of my
+            own
+          </li>
         </ul>
       </section>
       <Graph userData={data} />

@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import CustomToolTip from "./ToolTip";
+import styles from "./styles.module.scss";
 
 interface Props {
   userData: userDetails | undefined;
@@ -40,7 +41,7 @@ const Graph = ({ userData }: Props) => {
 
   return (
     <>
-      <ResponsiveContainer className='margin-auto' width='90%' height={400}>
+      <ResponsiveContainer className={styles.graphContainer} height={350}>
         <AreaChart
           data={data}
           margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
@@ -81,6 +82,15 @@ const Graph = ({ userData }: Props) => {
           />
         </AreaChart>
       </ResponsiveContainer>
+      <p
+        style={{
+          padding: "0 60px",
+          fontSize: "1.3em",
+          color: "var(--button-color)",
+        }}
+      >
+        My Contributions over the last 30 days
+      </p>
     </>
   );
 };

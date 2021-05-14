@@ -9,7 +9,7 @@ function ContactMe() {
       <div className={styles.social}>
         {SocialMediaLinks.map((obj) => (
           <LinkToNewTab className={styles.link} href={obj.url}>
-            <obj.icon className={styles.icon} fill='#fff' />
+            <obj.icon className={styles.icon} fill='var(--button-text-color)' />
           </LinkToNewTab>
         ))}
       </div>

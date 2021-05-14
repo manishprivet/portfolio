@@ -7,7 +7,7 @@ const style = css`
   background: none;
   border-radius: 30px;
   cursor: pointer;
-  color: #fff;
+  color: var(--text-color);
 `;
 
 export const Button = styled.button`

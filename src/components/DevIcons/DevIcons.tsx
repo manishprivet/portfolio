@@ -9,7 +9,10 @@ interface Props {
 }
 
 const DevIcons = ({ stacks, className }: Props) => {
-  const rest = { className };
+  const rest = {
+    className,
+    style: { stroke: "var(--text-color)", strokeWidth: 0.3 },
+  };
 
   const icons = stacks.map((s) => {
     const Component = Technologies.find((t) => t.name === s) as Technology;

@@ -38,8 +38,11 @@ const Github = () => {
         </h2>
         <p>
           and made a total of <span>{data?.totalContributions}</span>{" "}
-          contributions in <span>{data?.contributedTo}</span> repos till now, in
-          which I have
+          contributions in{" "}
+          <span>
+            {(data?.contributedTo || 0) + (data?.noOfRepositories || 0)}
+          </span>{" "}
+          repos till now, in which I have
         </p>
         <ul>
           <li>

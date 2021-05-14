@@ -50,12 +50,12 @@ const Graph = ({ userData }: Props) => {
             <linearGradient id='colorContributions' x1='0' y1='0' x2='0' y2='1'>
               <stop
                 offset='5%'
-                stopColor='var(--text-color)'
+                stopColor='var(--button-color)'
                 stopOpacity={0.8}
               />
               <stop
                 offset='95%'
-                stopColor='var(--text-color)'
+                stopColor='var(--button-color)'
                 stopOpacity={0}
               />
             </linearGradient>
@@ -77,6 +77,7 @@ const Graph = ({ userData }: Props) => {
             type='monotone'
             dataKey='contributions'
             stroke='var(--button-color)'
+            strokeWidth={1.5}
             fillOpacity={1}
             fill='url(#colorContributions)'
           />

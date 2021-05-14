@@ -35,6 +35,7 @@ const DevIcons = ({ stacks, className }: Props) => {
           delayHide={500}
           delayShow={500}
           delayUpdate={500}
+          arrowColor='var(--button-color)'
         >
           <h4>{Component.name}</h4>
           <p>{Component.description}</p>

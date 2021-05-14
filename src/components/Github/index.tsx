@@ -3,8 +3,8 @@ import axios, { AxiosResponse } from "axios";
 import { useState, useEffect } from "react";
 import { userDetails } from "../../../@types/interfaces";
 import Graph from "./Graph";
-import styles from "./styles.module.scss";
 import { LinkToNewTab } from "../Primitives/Link";
+import { SubSectionContainer } from "../Primitives/Containers";
 
 type APIResponse = AxiosResponse<userDetails>;
 
@@ -29,7 +29,7 @@ const Github = () => {
 
   return (
     <>
-      <section className={styles.infoContainer}>
+      <SubSectionContainer>
         <h2>
           I ❤️ Open Source and{" "}
           <LinkToNewTab href='https://github.com/manishprivet' withIcon>
@@ -66,7 +66,7 @@ const Github = () => {
             own
           </li>
         </ul>
-      </section>
+      </SubSectionContainer>
       <Graph userData={data} />
     </>
   );

@@ -65,7 +65,7 @@ export const fetchSpotifyData = async (
   const track = data.items[0].track;
 
   const returnData: TrackDetails = {
-    albumArt: track.album.images[0].url,
+    albumArt: track.album.images[1].url,
     artist: track.artists.reduce((a, d) => a + d.name + ", ", ""),
     name: track.name,
     preview: track.preview_url,

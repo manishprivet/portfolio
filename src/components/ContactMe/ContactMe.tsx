@@ -8,7 +8,7 @@ function ContactMe() {
       <h1 className={styles.header}>Contact Me</h1>
       <div className={styles.social}>
         {SocialMediaLinks.map((obj) => (
-          <LinkToNewTab className={styles.link} href={obj.url}>
+          <LinkToNewTab key={obj.url} className={styles.link} href={obj.url}>
             <obj.icon className={styles.icon} fill='var(--button-text-color)' />
           </LinkToNewTab>
         ))}

@@ -41,7 +41,7 @@ import {
 } from "react-icons/si";
 import { ReactComponent as DialogFlowIcon } from "../Stack/dialogflow.svg";
 import { ReactComponent as VercelIcon } from "../Stack/vercel.svg";
-import { ReactComponent as DynamoDBIcon } from "../Stack/aws-dynamodb.svg";
+import { ReactComponent as DynamoDBIcon } from "../Stack/amazondynamodb.svg";
 
 export const Icons = {
   SiJavascript,

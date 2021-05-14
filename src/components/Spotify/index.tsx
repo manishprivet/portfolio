@@ -2,9 +2,9 @@ import Spinner from "../Spinner";
 import axios, { AxiosResponse } from "axios";
 import { useState, useEffect } from "react";
 import { SpotifyAPIResponse } from "../../../@types/interfaces";
-import styles from "./styles.module.scss";
 import { LinkToNewTab } from "../Primitives/Link";
 import { CircularImage } from "../Primitives/Images";
+import { SubSectionContainer } from "../Primitives/Containers";
 
 type APIResponse = AxiosResponse<SpotifyAPIResponse>;
 
@@ -24,33 +24,31 @@ const Spotify = () => {
   }, []);
 
   return (
-    <>
-      <section className={styles.infoContainer}>
-        <h2>I like 🎵 and I</h2>
-        {loading && <Spinner small text='Browsing my playlist' />}
-        {!loading && (
-          <p>
-            {data?.type === "now"
-              ? `Am currently listening to `
-              : `Recently listened to `}
-            <br />
-            <LinkToNewTab href={data?.data.url}>
-              <CircularImage
-                height='80px'
-                width='80px'
-                src={data?.data.albumArt}
-                alt={data?.data.name}
-              />
-              <section>
-                {data?.data.name}
-                <br />
-                <span>{data?.data.artist.slice(0, -2)}</span>
-              </section>
-            </LinkToNewTab>
-          </p>
-        )}
-      </section>
-    </>
+    <SubSectionContainer>
+      <h2>I like 🎵 and I</h2>
+      {loading && <Spinner small text='Browsing my playlist' />}
+      {!loading && (
+        <section>
+          {data?.type === "now"
+            ? `Am currently listening to `
+            : `Recently listened to `}
+          <br />
+          <LinkToNewTab className='horizontal' href={data?.data.url}>
+            <CircularImage
+              height='80px'
+              width='80px'
+              src={data?.data.albumArt}
+              alt={data?.data.name}
+            />
+            <section>
+              {data?.data.name}
+              <br />
+              <span>{data?.data.artist.slice(0, -2)}</span>
+            </section>
+          </LinkToNewTab>
+        </section>
+      )}
+    </SubSectionContainer>
   );
 };
 

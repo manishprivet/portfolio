@@ -62,7 +62,7 @@ export const Technologies: Technology[] = [
       "A key-value and document database that delivers single-digit millisecond performance at any scale",
     Icon: Icons.DynamoDBIcon,
     url: "https://aws.amazon.com/dynamodb/",
-    primaryColor: ColorTypes.NONE,
+    primaryColor: "#4053D6",
   },
   {
     name: "Firebase",

@@ -1,3 +1,11 @@
+:root {
+  --button-color: #f9bc60;
+  --text-color: #fffffe;
+  --background-color: #004643;
+  --link-color: #abd1c6;
+  --button-text-color: #001e1d;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,8 +13,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000000;
-  color: #fff;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 code {
@@ -14,27 +22,28 @@ code {
     monospace;
 }
 
-:root {
-  --button-color: #f7df1e;
-  --text-color: #fefefe;
-}
-
 .tooltip {
   max-width: 300px;
   width: auto;
-  background: rgba($color: #000000, $alpha: 1) !important;
+  background: var(--text-color) !important;
+  color: var(--background-color) !important;
   border: none;
   border-radius: 15px !important;
   opacity: 1 !important;
   transition: none !important;
   line-height: 1.5em;
   font-size: 1.1rem !important;
+  padding: 10px 20px !important;
 
   a {
-    color: var(--button-color);
+    color: var(--link-color);
   }
 
   h4 {
     margin: 5px 0;
   }
+}
+
+.margin-auto {
+  margin: auto;
 }

@@ -28,7 +28,7 @@
     "stages": []
   },
   "interactivity": {
-    "detectsOn": "canvas",
+    "detectsOn": "window",
     "events": {
       "onClick": {
         "enable": true,
@@ -42,7 +42,7 @@
       },
       "onHover": {
         "enable": true,
-        "mode": "bubble",
+        "mode": "bounce",
         "parallax": {
           "enable": false,
           "force": 2,
@@ -83,7 +83,7 @@
         "quantity": 2
       },
       "repulse": {
-        "distance": 400,
+        "distance": 100,
         "duration": 0.4,
         "speed": 1
       },
@@ -174,7 +174,7 @@
         "factor": 1000
       },
       "limit": 0,
-      "value": 160
+      "value": 260
     },
     "opacity": {
       "animation": {

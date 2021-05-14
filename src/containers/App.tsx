@@ -6,6 +6,7 @@ import ContactForm from "../components/Form/ContactForm";
 import { Suspense, lazy } from "react";
 import Spinner from "../components/Spinner";
 import { IOptions, RecursivePartial } from "tsparticles";
+import Github from "../components/Github";
 
 const Technologies = lazy(
   () => import("../components/Technologies/Technologies")
@@ -23,6 +24,7 @@ const App = () => (
       />
     </Suspense>
     <Profile />
+    <Github />
     <Suspense fallback={<Spinner />}>
       <Technologies />
       <Projects />

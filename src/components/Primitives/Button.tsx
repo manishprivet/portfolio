@@ -15,7 +15,7 @@ export const Button = styled.button`
 
   &:hover {
     background-color: var(--button-color);
-    color: black;
+    color: var(--button-text-color);
   }
 `;
 
@@ -23,10 +23,10 @@ export const ButtonAlternate = styled.button`
   ${style}
 
   background-color: var(--button-color);
-  color: #000;
+  color: var(--button-text-color);
 
   &:hover {
     background-color: transparent;
-    color: white;
+    color: var(--text-color);
   }
 `;

@@ -27,7 +27,7 @@ const THEMES: Theme[] = [
     background: "#fec7d7",
     headline: "#0e172c",
     paragraph: "#0e172c",
-    button: "#0e172c",
+    button: "#f25042",
     buttonText: "#fffffe",
     text: "#0e172c",
     darkShade: "rgba(59, 59, 59, 0.1)",

@@ -153,9 +153,9 @@
         },
         "enable": false
       },
-      "outMode": "out",
+      "outMode": "bounce",
       "random": true,
-      "speed": 1,
+      "speed": 0.3,
       "straight": false,
       "trail": {
         "enable": false,
@@ -174,7 +174,7 @@
         "factor": 1000
       },
       "limit": 0,
-      "value": 260
+      "value": 100
     },
     "opacity": {
       "animation": {

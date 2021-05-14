@@ -7,7 +7,7 @@ const style = css`
   padding: 10px;
   background: none;
   outline: none;
-  border: 1px solid var(--text-color);
+  border: 2px solid var(--text-color);
   color: var(--text-color);
 
   @media only screen and (max-width: 600px) {

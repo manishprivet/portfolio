@@ -43,14 +43,14 @@ const recentlyPlayed = async (token: string) => {
   return res.data as SpotifyResponse;
 };
 
-const nowPlaying = async (token: string): Promise<SpotifyResponse | null> => {
+const nowPlaying = async (token: string): Promise<SpotifyResponse> => {
   const res = await axios.get(SPOTIFY_URL_NOW_PLAYING, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   });
 
-  return { items: [{ track: res.data?.item }] } as SpotifyResponse | null;
+  return { items: [{ track: res.data?.item }] } as SpotifyResponse;
 };
 
 export const fetchSpotifyData = async (

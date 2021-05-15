@@ -20,7 +20,7 @@ function Profile() {
             <span style={{ color: "var(--button-color)" }}>
               Graphic Designer
             </span>
-            <span style={{ color: "#f9bc60" }}>Cloud Architect</span>
+            <span style={{ color: "#4285F4" }}>Cloud Architect</span>
           </TextLoop>{" "}
         </h2>
         <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'>

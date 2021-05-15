@@ -74,3 +74,15 @@ export interface Technology {
   description: string;
   primaryColor: string | ColorTypes;
 }
+
+export interface Theme {
+  background: string;
+  headline: string;
+  text: string;
+  button: string;
+  paragraph: string;
+  buttonText: string;
+  subHeadline?: string;
+  darkShade: string;
+  lightShade: string;
+}

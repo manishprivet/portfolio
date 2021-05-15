@@ -58,9 +58,13 @@ export const SubSectionContainer = styled.section`
         display: flex;
         flex-flow: column;
         justify-content: center;
+        font-weight: 600;
 
-        caption {
-          width: 100%;
+        span {
+          font-weight: 400;
+          font-size: 0.8em;
+          color: var(--text-color);
+          margin-top: 6px;
         }
       }
     }

@@ -41,4 +41,5 @@ export const stacks: Array<stackTypes> = [
   "DialogFlow",
   "Svelte",
   "Deno",
+  "Stripe",
 ];

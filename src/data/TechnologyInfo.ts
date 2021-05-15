@@ -334,4 +334,12 @@ export const Technologies: Technology[] = [
     url: "https://www.wireguard.com/",
     primaryColor: "#88171A",
   },
+  {
+    name: "Stripe",
+    description:
+      "Stripe is a suite of payment APIs that powers commerce for online businesses of all sizes, including fraud prevention, and subscription management",
+    Icon: Icons.SiStripe,
+    url: "https://stripe.com/en-in",
+    primaryColor: "#008CDD",
+  },
 ];

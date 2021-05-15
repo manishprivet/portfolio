@@ -38,6 +38,7 @@ import {
   SiMarkdown,
   SiSvelte,
   SiDeno,
+  SiStripe,
 } from "react-icons/si";
 import { ReactComponent as DialogFlowIcon } from "../Stack/dialogflow.svg";
 import { ReactComponent as VercelIcon } from "../Stack/vercel.svg";
@@ -86,4 +87,5 @@ export const Icons = {
   DialogFlowIcon,
   VercelIcon,
   DynamoDBIcon,
+  SiStripe,
 };

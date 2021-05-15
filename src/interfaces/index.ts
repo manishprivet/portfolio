@@ -54,7 +54,8 @@ export type stackTypes =
   | "Netlify"
   | "DialogFlow"
   | "Svelte"
-  | "Deno";
+  | "Deno"
+  | "Stripe";
 
 export interface SocialMediaLink {
   url: string;

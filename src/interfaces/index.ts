@@ -55,7 +55,8 @@ export type stackTypes =
   | "DialogFlow"
   | "Svelte"
   | "Deno"
-  | "Stripe";
+  | "Stripe"
+  | "Wordpress";
 
 export interface SocialMediaLink {
   url: string;

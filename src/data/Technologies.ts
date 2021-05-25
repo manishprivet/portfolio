@@ -42,4 +42,5 @@ export const stacks: Array<stackTypes> = [
   "Svelte",
   "Deno",
   "Stripe",
+  "Wordpress",
 ];

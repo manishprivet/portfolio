@@ -10,9 +10,9 @@ const handler = async (_: VercelRequest, res: VercelResponse) => {
     .status(200)
     .json(
       await fetchSpotifyData(
-        SPOTIFY_CLIENT_ID,
-        SPOTIFY_SECRET_ID,
-        SPOTIFY_REFRESH_TOKEN
+        SPOTIFY_CLIENT_ID || "",
+        SPOTIFY_SECRET_ID || "",
+        SPOTIFY_REFRESH_TOKEN || ""
       )
     );
 };

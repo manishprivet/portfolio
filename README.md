@@ -1,8 +1,7 @@
 <p align="justify">
 
-[![Maintenance](https://img.shields.io/maintenance/yes/2020?style=for-the-badge)](https://github.com/manishprivet/portfolio) ![GitHub last commit](https://img.shields.io/github/last-commit/manishprivet/portfolio?style=for-the-badge)
+
 [![Website](https://img.shields.io/website?down_color=blue&down_message=rocking&style=for-the-badge&up_color=blue&up_message=rocking&url=https%3A%2F%2Fmanishk.dev%2F)](https://manishk.dev)
-![David](https://img.shields.io/david/manishprivet/portfolio?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/manishprivet/portfolio?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/manishprivet/portfolio?style=for-the-badge)
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/manishprivet/portfolio/react?style=for-the-badge)

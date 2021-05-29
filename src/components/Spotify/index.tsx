@@ -13,7 +13,7 @@ type APIResponse = AxiosResponse<SpotifyAPIResponse>;
 const Spotify = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState<SpotifyAPIResponse | undefined>(undefined);
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false);
   const audio = useRef<HTMLAudioElement>(null);
 
   const fetchData = async () => {
@@ -28,12 +28,7 @@ const Spotify = () => {
   }, []);
 
   useEffect(() => {
-    setTimeout(() => {
-      if (audio.current) audio.current.volume = 0.2;
-    }, 0);
-  }, [data]);
-
-  useEffect(() => {
+    if (audio.current) audio.current.volume = 0.4;
     if (playing) audio.current?.play();
     else audio.current?.pause();
   }, [playing]);
@@ -55,12 +50,14 @@ const Spotify = () => {
               src={data?.data.albumArt}
               alt={data?.data.name}
             />
-            <button
-              className={styles.controlButton}
-              onClick={() => setPlaying(!playing)}
-            >
-              {playing ? <FaPause /> : <FaPlay />}
-            </button>
+            {data?.data.preview && (
+              <button
+                className={styles.controlButton}
+                onClick={() => setPlaying(!playing)}
+              >
+                {playing ? <FaPause /> : <FaPlay />}
+              </button>
+            )}
             <LinkToNewTab className={styles.song} href={data?.data.url}>
               <section>
                 {data?.data.name}
@@ -72,7 +69,6 @@ const Spotify = () => {
           {data?.data.preview && (
             <audio
               ref={audio}
-              autoPlay
               loop
               style={{ display: "none" }}
               src={data?.data.preview}

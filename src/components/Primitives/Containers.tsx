@@ -48,9 +48,10 @@ export const SubSectionContainer = styled.section`
       }
     }
 
-    a.horizontal {
+    div.horizontal {
       display: flex;
       padding-top: 30px;
+      align-items: center;
 
       section {
         margin-left: 15px;

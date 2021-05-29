@@ -1,16 +1,20 @@
 import Spinner from "../Spinner";
 import axios, { AxiosResponse } from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { SpotifyAPIResponse } from "../../../@types/interfaces";
 import { LinkToNewTab } from "../Primitives/Link";
 import { CircularImage } from "../Primitives/Images";
 import { SubSectionContainer } from "../Primitives/Containers";
+import styles from "./Spotify.module.scss";
+import { FaPause, FaPlay } from "react-icons/fa";
 
 type APIResponse = AxiosResponse<SpotifyAPIResponse>;
 
 const Spotify = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState<SpotifyAPIResponse | undefined>(undefined);
+  const [playing, setPlaying] = useState(true);
+  const audio = useRef<HTMLAudioElement>(null);
 
   const fetchData = async () => {
     setLoading(true);
@@ -23,6 +27,17 @@ const Spotify = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      if (audio.current) audio.current.volume = 0.2;
+    }, 0);
+  }, [data]);
+
+  useEffect(() => {
+    if (playing) audio.current?.play();
+    else audio.current?.pause();
+  }, [playing]);
+
   return (
     <SubSectionContainer>
       <h2>I like 🎵 and I</h2>
@@ -33,19 +48,36 @@ const Spotify = () => {
             ? `Am currently listening to `
             : `Recently listened to `}
           <br />
-          <LinkToNewTab className='horizontal' href={data?.data.url}>
+          <div className='horizontal'>
             <CircularImage
               height='80px'
               width='80px'
               src={data?.data.albumArt}
               alt={data?.data.name}
             />
-            <section>
-              {data?.data.name}
-              <br />
-              <span>{data?.data.artist.slice(0, -2)}</span>
-            </section>
-          </LinkToNewTab>
+            <button
+              className={styles.controlButton}
+              onClick={() => setPlaying(!playing)}
+            >
+              {playing ? <FaPause /> : <FaPlay />}
+            </button>
+            <LinkToNewTab className={styles.song} href={data?.data.url}>
+              <section>
+                {data?.data.name}
+                <br />
+                <span>{data?.data.artist.slice(0, -2)}</span>
+              </section>
+            </LinkToNewTab>
+          </div>
+          {data?.data.preview && (
+            <audio
+              ref={audio}
+              autoPlay
+              loop
+              style={{ display: "none" }}
+              src={data?.data.preview}
+            />
+          )}
         </section>
       )}
     </SubSectionContainer>

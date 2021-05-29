@@ -1,0 +1,28 @@
+.controlButton {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+
+  svg {
+    height: 25px;
+    width: 25px;
+    fill: white;
+    // transform: translateX(2px);
+    stroke: var(--text-color);
+    stroke-width: 50;
+    stroke-opacity: 1;
+  }
+}
+
+.song {
+  margin-left: 5px;
+}

@@ -57,13 +57,4 @@ export const THEMES: Theme[] = [
     text: "#33272a",
     ...SHADES.LIGHT,
   },
-  {
-    background: "#55423d",
-    headline: "#fffffe",
-    paragraph: "#fff3ec",
-    button: "#ffc0ad",
-    buttonText: "#271c19",
-    text: "#fffffe",
-    ...SHADES.DARK,
-  },
 ];

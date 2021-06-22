@@ -66,6 +66,13 @@ const Github = () => {
             own
           </li>
         </ul>
+        <p style={{ paddingTop: 0, marginBottom: "15px" }}>
+          (I'm also a maintainer at{" "}
+          <LinkToNewTab withIcon href='https://github.com/nodejs/nodejs.dev'>
+            Nodejs.dev
+          </LinkToNewTab>{" "}
+          )
+        </p>
       </SubSectionContainer>
       <Graph userData={data} />
     </>

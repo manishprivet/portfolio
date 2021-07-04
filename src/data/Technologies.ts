@@ -43,4 +43,5 @@ export const stacks: Array<stackTypes> = [
   "Deno",
   "Stripe",
   "Wordpress",
+  "Kubernetes",
 ];

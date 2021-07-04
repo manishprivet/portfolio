@@ -40,6 +40,7 @@ import {
   SiDeno,
   SiStripe,
   SiWordpress,
+  SiKubernetes,
 } from "react-icons/si";
 import { ReactComponent as DialogFlowIcon } from "../Stack/dialogflow.svg";
 import { ReactComponent as VercelIcon } from "../Stack/vercel.svg";
@@ -90,4 +91,5 @@ export const Icons = {
   DynamoDBIcon,
   SiStripe,
   SiWordpress,
+  SiKubernetes,
 };

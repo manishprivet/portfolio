@@ -3,6 +3,14 @@ import { Icons } from "./Icons";
 
 export const Technologies: Technology[] = [
   {
+    name: "Kubernetes",
+    Icon: Icons.SiKubernetes,
+    description:
+      "An open-source system for automating deployment, scaling, and management of containerized applications",
+    url: "https://kubernetes.io/",
+    primaryColor: "#326CE5",
+  },
+  {
     name: "Wordpress",
     Icon: Icons.SiWordpress,
     description:

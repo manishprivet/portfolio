@@ -56,7 +56,8 @@ export type stackTypes =
   | "Svelte"
   | "Deno"
   | "Stripe"
-  | "Wordpress";
+  | "Wordpress"
+  | "Kubernetes";
 
 export interface SocialMediaLink {
   url: string;

@@ -38,7 +38,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className='App'>
+    <div className={styles.container}>
       <Suspense fallback={null}>
         <Particles
           container={ref}

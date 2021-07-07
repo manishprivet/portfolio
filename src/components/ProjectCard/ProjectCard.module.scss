@@ -42,6 +42,7 @@
       img {
         width: 100%;
         margin-top: auto;
+        border: 1px solid var(--text-color);
       }
     }
   }
@@ -54,6 +55,10 @@
     }
     .image {
       width: 100%;
+
+      img {
+        border: none;
+      }
     }
   }
 }

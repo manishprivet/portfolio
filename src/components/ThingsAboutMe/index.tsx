@@ -3,6 +3,7 @@ import Github from "../Github";
 import Spotify from "../Spotify";
 import Blog from "../Blog";
 import styles from "./styles.module.scss";
+import Achievements from "../Achievemnts";
 
 const ThingsAboutMe = () => {
   return (
@@ -14,6 +15,8 @@ const ThingsAboutMe = () => {
         <Gaming />
         <hr />
         <Blog />
+        <hr />
+        <Achievements />
         <hr />
         <Github />
       </div>

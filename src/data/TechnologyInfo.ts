@@ -3,6 +3,22 @@ import { Icons } from "./Icons";
 
 export const Technologies: Technology[] = [
   {
+    name: "Jekyll",
+    Icon: Icons.SiJekyll,
+    description:
+      "A simple, blog-aware, static site generator for personal, project, or organization sites. Written in Ruby by Tom Preston-Werner, GitHub's co-founder, it is distributed under the open source MIT license",
+    url: "https://jekyllrb.com/",
+    primaryColor: ColorTypes.DEFAULT,
+  },
+  {
+    name: "Bash",
+    Icon: Icons.SiGnubash,
+    description:
+      "Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell",
+    url: "https://www.gnu.org/software/bash/",
+    primaryColor: ColorTypes.DEFAULT,
+  },
+  {
     name: "Kubernetes",
     Icon: Icons.SiKubernetes,
     description:

@@ -57,7 +57,9 @@ export type stackTypes =
   | "Deno"
   | "Stripe"
   | "Wordpress"
-  | "Kubernetes";
+  | "Kubernetes"
+  | "Bash"
+  | "Jekyll";
 
 export interface SocialMediaLink {
   url: string;

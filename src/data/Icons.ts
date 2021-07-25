@@ -41,6 +41,8 @@ import {
   SiStripe,
   SiWordpress,
   SiKubernetes,
+  SiGnubash,
+  SiJekyll,
 } from "react-icons/si";
 import { ReactComponent as DialogFlowIcon } from "../Stack/dialogflow.svg";
 import { ReactComponent as VercelIcon } from "../Stack/vercel.svg";
@@ -92,4 +94,6 @@ export const Icons = {
   SiStripe,
   SiWordpress,
   SiKubernetes,
+  SiGnubash,
+  SiJekyll,
 };

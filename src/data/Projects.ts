@@ -18,6 +18,14 @@ export const projects = [
     github: "https://github.com/manishprivet/electify",
   } as projectType,
   {
+    title: "Gnome Dynamic Wallpapers",
+    content: `A collection of awesome dynamic wallpapers for Gnome, and easy scripts to install them`,
+    link: "https://wallpapers.manishk.dev",
+    image: "dynamic-wallpaper.webp",
+    stack: ["Bash", "Gnome", "Jekyll"],
+    github: "https://github.com/manishprivet/dynamic-gnome-wallpapers",
+  } as projectType,
+  {
     title: "IEEE Student Branch Website",
     content: `Managed Design, Development and Deployment of the site. Built User Authentication using various OAuth services and an implementation of our own. Built Interactive Forms, Dynamic Content delivery and optimization, content upload and management system and cost-effective cloud architecture for deployment.`,
     link: "https://ieee.iiitm.ac.in",

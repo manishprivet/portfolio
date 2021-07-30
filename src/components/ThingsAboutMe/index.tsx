@@ -4,6 +4,7 @@ import Spotify from "../Spotify";
 import Blog from "../Blog";
 import styles from "./styles.module.scss";
 import Achievements from "../Achievemnts";
+import Devcard from "../Devcard";
 
 const ThingsAboutMe = () => {
   return (
@@ -13,6 +14,8 @@ const ThingsAboutMe = () => {
         <Spotify />
         <hr />
         <Gaming />
+        <hr />
+        <Devcard />
         <hr />
         <Blog />
         <hr />

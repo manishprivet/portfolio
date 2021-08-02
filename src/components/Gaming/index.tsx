@@ -7,10 +7,7 @@ const Gaming = () => (
     <h2>I'm also into Gaming 🎮</h2>
     <section>
       Add me on{" "}
-      <ToolTip
-        id='valorant-tooltip'
-        tooltipContent={<h4>CAPTAIN PRIVET #6969</h4>}
-      >
+      <ToolTip id='valorant-tooltip' tooltipContent={<h4>Ned Stark #got</h4>}>
         <span data-tip data-for='valorant-tooltip'>
           Valorant
         </span>

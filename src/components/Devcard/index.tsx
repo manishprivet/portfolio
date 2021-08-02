@@ -3,7 +3,7 @@ import { SubSectionContainer } from "../Primitives/Containers";
 
 const Devcard = () => (
   <SubSectionContainer>
-    <h2>I love to read technical blogs 📔</h2>
+    <h2>I love reading technical blogs 📔</h2>
     <p>
       <LinkToNewTab href='https://app.daily.dev/manishprivet'>
         <img

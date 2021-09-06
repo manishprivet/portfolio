@@ -7,7 +7,7 @@ import { Suspense, lazy, useRef, useState, useEffect } from "react";
 import Spinner from "../components/Spinner";
 import { IOptions, RecursivePartial } from "tsparticles";
 import ThemeSwitcher from "../components/ThemeSwitcher";
-import { Container } from "tsparticles/dist/Core/Container";
+import { Container } from "tsparticles";
 
 const Technologies = lazy(
   () => import("../components/Technologies/Technologies")

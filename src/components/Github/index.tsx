@@ -67,9 +67,9 @@ const Github = () => {
           </li>
         </ul>
         <p style={{ paddingTop: 0, marginBottom: "15px" }}>
-          (I'm also a maintainer at{" "}
-          <LinkToNewTab withIcon href='https://github.com/nodejs/nodejs.dev'>
-            Nodejs.dev
+          (I'm also a contributor at{" "}
+          <LinkToNewTab withIcon href='https://github.com/nodejs/nodejs.org'>
+            Nodejs.org
           </LinkToNewTab>{" "}
           )
         </p>

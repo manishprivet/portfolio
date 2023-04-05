@@ -16,7 +16,7 @@ const ThemeSwitcher = ({ changeParticlesColor }: Props) => {
       darkShade,
       lightShade,
     } = THEMES[index];
-    if (typeof window !== undefined) {
+    if (typeof window !== 'undefined') {
       const html = document.querySelector("html") as HTMLElement;
       const style = html.style;
       style.setProperty("--text-color", text);

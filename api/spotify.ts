@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
-import { fetchSpotifyData } from "../utils/fetchers/spotify";
+import { fetchSpotifyData } from '../utils/fetchers/spotify';
 
 const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 const SPOTIFY_SECRET_ID = process.env.SPOTIFY_SECRET_ID;

@@ -5,7 +5,7 @@ const Achievements = () => (
     <h2>I also have a few achievements 👨‍🎓</h2>
     <ul>
       <li>
-        I'm the current <span>Google DSC Lead</span> at my university
+        I was the <span>Google DSC Lead</span> at my university
       </li>
     </ul>
   </SubSectionContainer>
